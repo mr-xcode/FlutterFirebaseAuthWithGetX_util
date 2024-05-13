@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
@@ -20,4 +21,11 @@ class HomeController extends GetxController {
   }
 
   void increment() => count.value++;
+  Future<void> signOut() async {
+    try {
+      await FirebaseAuth.instance.signOut();
+    } catch (e) {
+      Get.snackbar("Signout Error", e.toString());
+    }
+  }
 }
