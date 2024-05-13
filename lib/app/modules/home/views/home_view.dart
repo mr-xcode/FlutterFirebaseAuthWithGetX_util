@@ -15,7 +15,7 @@ class HomeView extends GetView<HomeController> {
     String email = currentUser?.email ?? '';
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.white),
+        iconTheme: const IconThemeData(color: Colors.white),
         title: const Text(
           'Home',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
@@ -27,7 +27,7 @@ class HomeView extends GetView<HomeController> {
             onPressed: () {
               controller.signOut();
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.logout,
               color: Colors.white,
             ),
@@ -36,7 +36,7 @@ class HomeView extends GetView<HomeController> {
       ),
       body: Container(
         color: Colors.grey[100],
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         width: double.infinity,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -45,7 +45,7 @@ class HomeView extends GetView<HomeController> {
             Text(displayName),
             Text(
               'Email: ' + email,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
               ),
