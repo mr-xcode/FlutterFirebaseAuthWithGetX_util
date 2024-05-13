@@ -13,7 +13,7 @@ void main() async {
 
   runApp(
     GetMaterialApp(
-      title: "Application",
+      title: "FirebaseAuth with GetX",
       debugShowCheckedModeBanner: false,
       initialRoute: AppPages.INITIAL,
       initialBinding: AuthGateBinding(),
