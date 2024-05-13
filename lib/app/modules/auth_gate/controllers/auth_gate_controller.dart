@@ -2,8 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 
 class AuthGateController extends GetxController {
-  //TODO: Implement AuthGateController
-
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
   Stream<User?> get authStateChanges => _auth.authStateChanges();
@@ -17,15 +15,5 @@ class AuthGateController extends GetxController {
         Get.offNamed('/home');
       }
     });
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
   }
 }
